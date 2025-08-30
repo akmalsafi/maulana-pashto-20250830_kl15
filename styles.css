@@ -1,0 +1,50 @@
+
+:root{--bg:#f7fafc;--ink:#1f2937;--muted:#6b7280;--card:#fff;--border:#e5e7eb;--accent:#7c3aed;--accent2:#10b981;--shadow:0 12px 28px rgba(0,0,0,.06)}
+*{box-sizing:border-box} html{font-size:18px}
+body{margin:0;color:var(--ink);background:radial-gradient(1200px 800px at 80% -20%,#eef2ff 0%,var(--bg) 40%) fixed;font-family:"Noto Naskh Arabic","Scheherazade New",serif;line-height:1.9;direction:rtl}
+.container{max-width:1040px;margin:0 auto;padding:1.25rem}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.75rem;
+  position:static; /* 👈 nu scrollar menyn bort som vanligt */
+  z-index:30;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--border);
+  padding:.6rem 1rem
+}
+
+
+
+.brand{display:flex;align-items:center;gap:.6rem;color:inherit;text-decoration:none}
+.brand .title{font-weight:800;letter-spacing:.px}
+.menu{display:flex;gap:.2rem;flex-wrap:wrap}
+.menu a{color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--border);padding:.45rem .8rem;border-radius:999px;box-shadow:var(--shadow)}
+.menu a.active,.menu a:hover{border-color:var(--accent)}
+
+
+.hero{display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:center;padding:1.25rem}
+.hero img{width:100%;height:auto;border-radius:1rem;border:1px solid var(--border);box-shadow:var(--shadow);object-fit:cover}
+.hero h1{margin:.25rem 0 0;font-size:1.75rem}
+.hero p{margin:.25rem 0 0;color:var(--muted)}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1rem;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+hr{border:none;border-top:1px dashed var(--border);margin:1.25rem 0}
+.badge{display:inline-block;padding:.2rem .6rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:var(--muted);font-size:.85rem}
+a.btn{display:inline-block;text-decoration:none;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:.6rem 1rem;border-radius:.7rem;box-shadow:var(--shadow)}
+blockquote{margin:0;padding:.75rem 1rem;background:#fafaff;border-right:3px solid var(--accent)}
+.article-cover{width:100%;border-radius:1rem;border:1px solid var(--border);box-shadow:var(--shadow);margin:.25rem 0 1rem;object-fit:cover;aspect-ratio:16/9}
+footer{margin-top:2rem;padding:2rem 1rem;text-align:center;color:var(--muted)}
+.notice{font-size:.9rem;color:var(--muted)}
+@media (max-width:640px){.hero{grid-template-columns:1fr}}
+
+
+.article-text {
+  font-size: 1.2rem;   /* gör texten större */
+  line-height: 2;      /* lite luftigare radavstånd */
+}
+
